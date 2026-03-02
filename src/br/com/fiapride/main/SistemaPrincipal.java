@@ -13,7 +13,7 @@ public class SistemaPrincipal {
 
         Passageiro passageiro2 = new Passageiro("Carlos Souza", "333");
         System.out.println("Regarga passageiro 2");
-        passageiro2.adicionarSaldo(12.5);
+        passageiro2.adicionarSaldo(15);
 
         System.out.println("--- Sistema FiapRide ---");
         System.out.println("Passageiro: " + passageiro1.getNome() + " | Saldo: R$ " + passageiro1.getSaldo() + " | CPF: " + passageiro1.getCpf());
