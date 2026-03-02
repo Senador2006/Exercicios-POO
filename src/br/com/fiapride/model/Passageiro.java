@@ -4,12 +4,14 @@ public class Passageiro {
     // Atributos
     private String nome;
     private String cpf;
+    private int idade;
     private double saldo;
 
     // Construtor
     public Passageiro(String nome, String cpf) {
         this.nome = nome;
         this.cpf = cpf;
+        this.idade = 0;
         this.saldo = 0.0;
     }
 
@@ -60,5 +62,13 @@ public class Passageiro {
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 }

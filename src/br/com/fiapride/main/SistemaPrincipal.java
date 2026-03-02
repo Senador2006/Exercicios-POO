@@ -7,11 +7,13 @@ public class SistemaPrincipal {
     public static void main(String[] args) {
 
         Passageiro passageiro1 = new Passageiro("Ana Silva", "222");
+        passageiro1.setIdade(18);
         System.out.println("Regarga passageiro 1");
         passageiro1.adicionarSaldo(50.0);
 
 
         Passageiro passageiro2 = new Passageiro("Carlos Souza", "333");
+        passageiro1.setIdade(20);
         System.out.println("Regarga passageiro 2");
         passageiro2.adicionarSaldo(15);
 
