@@ -1,29 +1,30 @@
 package br.com.fiapride.main;
 import br.com.fiapride.model.Paciente;
+import br.com.fiapride.model.Passageiro;
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class SistemaPrincipal {
     public static void main(String[] args) {
-        Scanner leitura = new Scanner(System.in);
 
-        // Paciente 1
-        Paciente paciente1 = new Paciente();
-        paciente1.nome = "Thiago";
-        paciente1.idade = 19;
-        paciente1.sintoma = "dor no coração";
-        paciente1.doenca = "amar demais";
+        Passageiro passageiro1 = new Passageiro("Ana Silva", "222");
+        System.out.println("Regarga passageiro 1");
+        passageiro1.adicionarSaldo(50.0);
 
-        //Paciente 2
-        Paciente paciente2 = new Paciente();
-        paciente2.nome = leitura.nextLine();
-        paciente2.idade = Integer.parseInt(leitura.nextLine());
-        paciente2.sintoma = leitura.nextLine();
-        paciente2.doenca = leitura.nextLine();
 
-        paciente1.exibeFicha();
-        paciente2.exibeFicha();
+        Passageiro passageiro2 = new Passageiro("Carlos Souza", "333");
+        System.out.println("Regarga passageiro 2");
+        passageiro2.adicionarSaldo(12.5);
+
+        System.out.println("--- Sistema FiapRide ---");
+        System.out.println("Passageiro: " + passageiro1.getNome() + " | Saldo: R$ " + passageiro1.getSaldo() + " | CPF: " + passageiro1.getCpf());
+        System.out.println("Passageiro: " + passageiro2.getNome() + " | Saldo: R$ " + passageiro2.getSaldo() + " | CPF: " + passageiro2.getCpf());
+
+        System.out.println("Pagando viagem do passageiro 1");
+        passageiro1.pagarViagem(20);
+        System.out.println("Pagando viagem do passageiro 2");
+        passageiro2.pagarViagem(20);
+
+
 
     }
 }
