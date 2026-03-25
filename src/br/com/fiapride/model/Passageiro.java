@@ -8,7 +8,7 @@ public class Passageiro {
     private double saldo;
 
     // Construtor
-    public Passageiro(String nome, String cpf) {
+    public Passageiro(String nome, String cpf, int idade) {
         this.nome = nome;
         this.cpf = cpf;
         this.idade = 0;
@@ -29,22 +29,28 @@ public class Passageiro {
     public void pagarViagem(double custo) {
 
         if (custo <= 0) {
+            System.out.println("-----------------------------------");
             System.out.println("Erro: O custo da viagem é inválido.");
+            System.out.println("-----------------------------------");
             return;
         }
         if (this.saldo < custo) {
+            System.out.println("------------------------------------------------");
             System.out.println("Erro: Saldo insuficiente para realizar a viagem.");
+            System.out.println("------------------------------------------------");
             return;
         }
         this.saldo -= custo;
+        System.out.println("-------------------------------");
         System.out.println("Viagem paga. Saldo restante: " + this.saldo);
+        System.out.println("-------------------------------");
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
+    private void setNome(String nome) {
         this.nome = nome;
     }
 
@@ -52,7 +58,7 @@ public class Passageiro {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    private void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
@@ -60,7 +66,7 @@ public class Passageiro {
         return saldo;
     }
 
-    public void setSaldo(double saldo) {
+    private void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
@@ -68,7 +74,7 @@ public class Passageiro {
         return idade;
     }
 
-    public void setIdade(int idade) {
+    private void setIdade(int idade) {
         this.idade = idade;
     }
 }
